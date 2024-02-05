@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "NFTCart_backend": {
+      "main": "src/NFTCart_backend/main.mo",
+      "type": "motoko"
+    },
+
+    "nft": {
+       "main": "src/NFT/nft.mo",
+        "type": "motoko"
+    },
+
+    "NFTCart_frontend": {
+      "dependencies": [
+        "NFTCart_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/NFTCart_frontend/src/index.html"
+      },
+      "source": [
+        "src/NFTCart_frontend/assets",
+        "dist/NFTCart_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
